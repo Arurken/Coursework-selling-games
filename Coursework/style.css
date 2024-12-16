@@ -1,0 +1,435 @@
+/* Общие стили для body и контейнера */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Задает минимальную высоту для body */
+    margin: 0;
+    background-image: url('./img/game-bg.png'); /* Укажите путь к вашей текстуре */
+    background-repeat: repeat; /* Дублирование изображения по всей области */
+    background-size: 150px 150px; /* Уменьшение размера изображения до 150x150 пикселей */
+    background-color: #12113e; /* Цвет фона будет виден только если изображение не загрузится */
+    font-family: 'Roboto', sans-serif; /* Применяем шрифт Roboto ко всему тексту */
+    color: #fff; /* Белый цвет текста по умолчанию */
+}
+
+.container {
+    display: flex; /* Создаем гибкую структуру */
+    flex-direction: column; /* Располагаем элементы вертикально */
+    flex: 1;
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для навигационной панели */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Распределяет элементы по краям */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .auth-buttons {
+    display: flex;
+    gap: 10px; /* Расстояние между кнопками */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Синий цвет фона */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Распределяет элементы по краям */
+    align-items: center; /* Выравнивает элементы по вертикали */
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: #fff;
+    background-color: #0056b3;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+}
+
+.navbar #statusMessage {
+    margin-left: auto; /* Перемещает сообщение о статусе вправо */
+    margin-right: 20px; /* Добавляет отступ справа */
+    color: #fff;
+    background-color: #7f397d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.navbar button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Синий цвет фона */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px; /* Отступ между кнопками */
+}
+
+.navbar button:hover {
+    background-color: #023973; /* Темно-синий цвет при наведении */
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для секции "О нас" */
+.about-section {
+    background-image: url('./img/game-about.png'); /* Укажите путь к вашей картинке */
+    background-size: cover; /* Обеспечивает полное отображение изображения */
+    background-position: center; /* Центрирование изображения */
+    padding: 50px 20px; /* Отступы */
+    text-align: center; /* Выравнивание текста по центру */
+    min-height: 400px; /* Минимальная высота секции (можно настроить) */
+    position: relative; /* Позволяет использовать абсолютное позиционирование для псевдоэлемента */
+    background-color: #2a2a2a; /* Темный фон для секции */
+}
+
+.about-section h1 {
+    font-size: 2.5em; /* Увеличенный размер заголовка */
+    color: #fff; /* Белый цвет текста */
+    background-color: rgba(0, 0, 0, 0.7); /* Черный фон с прозрачностью */
+    display: inline-block; /* Фон будет обтекать текст */
+    padding: 10px 20px; /* Отступы вокруг текста */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+.about-section p {
+    font-size: 1.2em; /* Размер текста */
+    color: #ddd; /* Светло-серый цвет текста */
+    background-color: rgba(0, 0, 0, 0.5); /* Черный фон с прозрачностью */
+    display: inline-block; /* Фон будет обтекать текст */
+    padding: 10px 20px; /* Отступы вокруг текста */
+    border-radius: 5px; /* Закругленные углы */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для блока игр */
+.menu-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #2a2a2a; /* Темный фон для блока игр */
+}
+
+.block {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    background-color: #3b3f4f; /* Темно-синий фон для блока */
+    padding-bottom: 20px; /* Отступ внизу блока */
+    border-radius: 10px; /* Закругленные углы */
+    color: #fff; /* Белый цвет текста */
+    font-size: 1em; /* Размер шрифта */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень для глубины */
+    transition: transform 0.3s ease; /* Плавный переход для увеличения */
+}
+
+.block:hover {
+    transform: scale(1.05); /* Увеличение блока при наведении */
+}
+
+.block img {
+    width: 100%; /* Изображение занимает всю ширину блока */
+    height: 200px; /* Фиксированная высота для изображения */
+    object-fit: cover; /* Масштабирует изображение, чтобы оно заполнило контейнер, сохраняя пропорции */
+    border-radius: 10px 10px 0 0; /* Закругленные углы только сверху */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.block h3 {
+    font-size: 1.5em; /* Размер заголовка */
+    margin: 10px 0; /* Отступы сверху и снизу */
+}
+
+.block p {
+    font-size: 1em; /* Размер текста */
+    color: #ddd; /* Светло-серый цвет текста */
+    padding: 0 10px; /* Отступы внутри блока */
+}
+
+.cost-text {
+    color: #ffcc00; /* Желтый цвет текста */
+    font-weight: bold; /* Жирный шрифт для выделения */
+    font-size: 1.2em; /* Увеличенный размер шрифта */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.block button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Синий цвет фона */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.block button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для попапа */
+.popup {
+    display: none; 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.7); 
+    z-index: 1001; 
+}
+
+.popup-content {
+    background-color: #3b3f4f; 
+    margin: auto; /* Убираем отступы */
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 80%; /* Ширина попапа */
+    max-width: 800px; /* Максимальная ширина попапа */
+    position: absolute; /* Позиционирование относительно родителя */
+    top: 50%; /* Позиция сверху */
+    left: 50%; /* Позиция слева */
+    transform: translate(-50%, -50%); /* Центрируем попап */
+    color: #fff; /* Белый цвет текста */
+}
+
+.popup-table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+}
+
+.popup-image-container {
+    width: 50%; /* Ширина колонки с картинкой */
+}
+
+.popup-image {
+    width: 100%; /* Ширина картинки */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.popup-text-container {
+    width: 50%; /* Ширина колонки с текстом */
+    padding-left: 20px; /* Отступ слева от текста */
+}
+
+.popup-text-container h2 {
+    font-size: 1.8em; /* Размер заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.popup-text-container p {
+    font-size: 1em; /* Размер текста */
+    color: #ddd; /* Светло-серый цвет текста */
+}
+
+.add-to-cart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Синий цвет фона */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для подвала */
+#footer-section {
+    background-color: #1a1a1a; /* Темный фон */
+    color: white; /* Белый текст */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    text-align: center; /* Выравнивание текста по центру */
+    margin-top: auto; /* Прижимаем футер к низу страницы */
+}
+
+.contact-title {
+    font-size: 1.5em; /* Размер заголовка */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+.contact-info {
+    font-size: 1em; /* Размер текста */
+    line-height: 1.6; /* Межстрочный интервал */
+}
+
+.contact-info a {
+    color: #ffcc00; /* Желтый цвет для ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 5px; /* Отступы между ссылками */
+    transition: color 0.3s ease; /* Плавный переход для цвета */
+}
+
+.contact-info a:hover {
+    color: #cbb704; /* Темнее при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Отступы между абзацами */
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для полей ввода */
+.form-group input {
+    width: 95%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный фон */
+}
+
+.form-group input:hover {
+    border-color: #218838; /* Темнее при наведении на поле ввода */
+}
+
+.form-group input:focus {
+    border-color: #218838; /* Темнее при фокусе на поле ввода */
+    outline: none; /* Убираем стандартное обрамление при фокусе */
+}
+
+.form-group input::placeholder {
+    color: #888; /* Цвет текста placeholder */
+    opacity: 0.7; /* Полупрозрачный текст */
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Фиксированное позиционирование */
+    z-index: 1002; /* Убедитесь, что оно отображается поверх всего */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Включаем прокрутку, если содержимое слишком большое */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: #3b3f4f;
+    margin: 15% auto; /* Центрируем по вертикали */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина модального окна */
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff; /* Белый цвет текста */
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ddd;
+    text-decoration: none;
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для кнопок управления количеством */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-controls button {
+    background-color: #007bff; /* Синий цвет фона */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-controls button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}
+
+/*--------------------------------------------------------------------*/
+
+/* Стили для уведомлений */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1003;
+    animation: fadeOut 3s forwards; /* Анимация исчезновения через 3 секунды */
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
