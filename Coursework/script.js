@@ -239,7 +239,7 @@ function showOrderDetailsInModal(order) {
     // Содержимое модального окна
     let detailsHtml = `
         <p><strong>Дата заказа:</strong> ${order.date}</p>
-        <p><strong>Имя пользователя:</strong> ${order.user_id}</p>
+        <p><strong>ID пользователя:</strong> ${order.user_id}</p>
         <p><strong>Общая стоимость:</strong> ${order.total_cost}₽</p>
         <h4>Купленные игры:</h4>
         <ul>
